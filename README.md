@@ -13,7 +13,7 @@ This is a simple RESTful API for managing shipments.
 
 ### Swagger Docs
 
-- Visit `https://your-app-domain/api-docs` to access the Swagger API documentation.
+- Visit `[https://your-app-domain/api-docs](https://your-app-domain/api-docs)` to access the Swagger API documentation.
 
 ### Setup
 
