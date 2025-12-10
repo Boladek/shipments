@@ -1,0 +1,100 @@
+{
+    "info": {
+        "name": "Shipment API",
+        "_postman_id": "1234-5678-91011",
+        "description": "API for managing shipments with pagination and search.",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Get All Shipments",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:3000/api/shipments?page={{page}}&limit={{limit}}&search={{search}}",
+                    "host": ["http://localhost:3000"],
+                    "path": ["api", "shipments"],
+                    "query": [
+                        {
+                            "key": "page",
+                            "value": "1",
+                            "description": "The page number"
+                        },
+                        {
+                            "key": "limit",
+                            "value": "10",
+                            "description": "The number of items per page"
+                        },
+                        {
+                            "key": "search",
+                            "value": "urgent",
+                            "description": "Search text"
+                        }
+                    ]
+                },
+                "description": "Get all shipments with optional pagination and text search."
+            },
+            "response": []
+        },
+        {
+            "name": "Get Shipment by ID",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:3000/api/shipments/{{id}}",
+                    "host": ["http://localhost:3000"],
+                    "path": ["api", "shipments", "{{id}}"]
+                },
+                "description": "Get a single shipment by ID."
+            },
+            "response": []
+        },
+        {
+            "name": "Create Shipment",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://localhost:3000/api/shipments",
+                    "host": ["http://localhost:3000"],
+                    "path": ["api", "shipments"]
+                },
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"senderName\": \"Alice Cooper\",\n  \"receiverName\": \"Bob Marley\",\n  \"origin\": \"Chicago\",\n  \"destination\": \"Miami\"\n}"
+                },
+                "description": "Create a new shipment."
+            },
+            "response": []
+        },
+        {
+            "name": "Update Shipment",
+            "request": {
+                "method": "PUT",
+                "url": {
+                    "raw": "http://localhost:3000/api/shipments/{{id}}",
+                    "host": ["http://localhost:3000"],
+                    "path": ["api", "shipments", "{{id}}"]
+                },
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"senderName\": \"Alice Cooper\",\n  \"receiverName\": \"Bob Marley\",\n  \"origin\": \"Chicago\",\n  \"destination\": \"Miami\",\n  \"status\": \"in_transit\"\n}"
+                },
+                "description": "Update a shipment by ID."
+            },
+            "response": []
+        },
+        {
+            "name": "Delete Shipment",
+            "request": {
+                "method": "DELETE",
+                "url": {
+                    "raw": "http://localhost:3000/api/shipments/{{id}}",
+                    "host": ["http://localhost:3000"],
+                    "path": ["api", "shipments", "{{id}}"]
+                },
+                "description": "Delete a shipment by ID."
+            },
+            "response": []
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "name": "shipment-api",
+    "version": "1.0.0",
+    "description": "A simple REST API for managing shipments",
+    "main": "app.js",
+    "scripts": {
+        "start": "node src/app.js",
+        "dev": "nodemon src/app.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "dotenv": "^17.2.3",
+        "express": "^4.17.1",
+        "joi": "^18.0.2",
+        "mongoose": "^5.10.9",
+        "swagger-jsdoc": "^6.2.8",
+        "swagger-ui-express": "^5.0.1"
+    },
+    "devDependencies": {
+        "nodemon": "^3.1.11"
+    }
+}
