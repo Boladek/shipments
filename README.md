@@ -11,6 +11,10 @@ This is a simple RESTful API for managing shipments.
 - `PUT /api/shipments/:id`: Update a shipment
 - `DELETE /api/shipments/:id`: Delete a shipment
 
+### Swagger Docs
+
+- Visit `https://your-app-domain/api-docs` to access the Swagger API documentation.
+
 ### Setup
 
 1. Install dependencies:
@@ -23,4 +27,4 @@ This is a simple RESTful API for managing shipments.
    yarn start
    ```
 
-3. Test the API using Postman or curl.
+3. Test the API using Postman or curl or you also directly access the swagger documentation.
